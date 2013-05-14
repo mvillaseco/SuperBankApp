@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/negro"
+    android:gravity="center"
+    tools:context=".MainActivity" >
+
+ <TextView
+        android:id="@+id/textView1"
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/azul"
+        android:text="@string/preguntaDepositar" />
+   
+             <Button
+                 android:id="@+id/uno"
+                 style="@style/Botones"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_below="@+id/textView1"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:onClick="OnClick"
+                 android:tag="@string/uno"
+                 android:text="@string/uno" />
+
+             <Button
+                 android:id="@+id/dos"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_below="@+id/textView1"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_toRightOf="@+id/uno"
+                 android:onClick="OnClick"
+                 android:tag="@string/dos"
+                 android:text="@string/dos" />
+             
+             <Button
+                 android:id="@+id/tres"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_toRightOf="@+id/dos"
+                 android:layout_marginTop="@dimen/margenTop"                 
+                 android:layout_below="@+id/textView1"
+                 android:tag="@string/tres"
+                 android:onClick="OnClick"
+                 android:text="@string/tres" />
+
+
+
+              <Button
+                 android:id="@+id/cuatro"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_below="@+id/uno"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:tag="@string/cuatro"
+                 android:onClick="OnClick"
+                 android:text="@string/cuatro" />
+              
+              <Button
+                 android:id="@+id/cinco"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_below="@+id/dos"
+                 android:layout_toRightOf="@+id/cuatro"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:tag="@string/cinco"
+                 android:onClick="OnClick"
+                 android:text="@string/cinco" />
+
+             <Button
+                 android:id="@+id/seis"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/tres"
+                 android:layout_toRightOf="@+id/cinco"
+                 android:tag="@string/seis"
+                 android:onClick="OnClick"
+                 android:text="@string/seis" />
+        
+             
+             <Button
+                 android:id="@+id/siete"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/cuatro"
+                  android:layout_marginRight="@dimen/margenRight"
+                  android:tag="@string/siete"
+                  android:onClick="OnClick"
+                 android:text="@string/siete" />
+
+			<Button
+                 android:id="@+id/ocho"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/cinco"
+                 android:layout_toRightOf="@+id/siete"
+                 android:tag="@string/ocho"
+                 android:onClick="OnClick"
+                  android:layout_marginRight="@dimen/margenRight"
+                 android:text="@string/ocho" />
+
+             
+             <Button
+                 android:id="@+id/nueve"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/seis"
+                 android:layout_toRightOf="@+id/ocho"
+                 android:tag="@string/nueve"
+                 android:onClick="OnClick"
+                 android:text="@string/nueve" />
+
+             <Button
+                 android:id="@+id/diez"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/siete"
+                 android:tag="1000"
+                 android:onClick="OnClick"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:text="@string/mil" />
+             
+             <Button
+                 android:id="@+id/quince"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/ocho"
+                 android:layout_toRightOf="@+id/diez"
+                 android:tag="3000"
+                 android:onClick="OnClick"
+                 android:text="@string/tresmil" />
+
+			<Button
+                 android:id="@+id/veinte"
+                 android:layout_width="@dimen/buttonWidth"
+                 android:layout_height="@dimen/buttonHeight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/nueve"
+                 android:tag="5000"
+                 android:onClick="OnClick"
+                 android:layout_toRightOf="@+id/quince"
+                 android:text="@string/cincomil" />
+
+			<ToggleButton
+			    android:id="@+id/toggleButton"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignRight="@+id/tres"
+			    android:layout_alignTop="@+id/textView1"
+			    android:textOff="@string/ToggleDescontar"
+			    android:textOn="@string/ToggleDepositar"
+			    android:onClick="ToggleChanged" />
+
+</RelativeLayout>

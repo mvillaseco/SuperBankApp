@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+     <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="buttonWidth">92dp</dimen>
+     <dimen name="buttonHeight">92dp</dimen>
+     <dimen name="toggleDescontar">48dip</dimen>
+     <dimen name="margenTop">5dp</dimen>
+     <dimen name="margenRight">5dp</dimen>
+     
+
+</resources>

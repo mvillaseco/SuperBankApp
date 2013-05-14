@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SuperBanKApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="preguntaDepositar">Cuanto vas a depositar?</string>
+    <string name="uno">100</string>
+    <string name="dos">200</string>
+    <string name="tres">300</string>
+    <string name="cuatro">400</string>
+    <string name="cinco">500</string>
+    <string name="seis">600</string>
+    <string name="siete">700</string>
+    <string name="ocho">800</string>
+    <string name="nueve">900</string>
+    <string name="mil">1.000</string>
+    <string name="tresmil">3.000</string>
+    <string name="cincomil">5.000</string>
+    <string name="title_activity_mil">Mil</string>
+    <string name="title_activity_depositado">Depositado</string>
+    <string name="depositCorrect">Depositado Correctamente!</string>
+    <string name="ToggleDescontar">Retirar</string>
+    <string name="ToggleDepositar">Depositar</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+
+    <!-- PrincipalActivity -->
+    <string name="SelBank">Seleccionar Banco</string>
+    <string name="GlobalMoney">Dinero Global</string>
+    <string name="Dolar">Precio Dolar</string>
+    <string name="Titulo">Bienvenido</string>
+    <string name="title_activity_bancos">BancosActivity</string>
+    
+    
+     <!-- BancosActivity -->
+     <string name="BBVA">BBVA</string>
+    <string name="Santander">Santander Rio</string>
+    <string name="Galicia">Galicia</string>
+     <string name="TituloBancos">Bancos:</string>
+     
+     
+
+</resources>
