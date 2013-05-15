@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name="com.example.superbankapp.HomeActivity"
-            android:label="@string/title_activity_home" >            
+            android:label="@string/title_activity_home" >
         </activity>
         <activity
             android:name="com.example.superbankapp.PrincipalActivity"
@@ -37,6 +37,10 @@
         <activity
             android:name="com.example.superbankapp.BancosActivity"
             android:label="@string/title_activity_bancos" >
+        </activity>
+        <activity
+            android:name="com.example.superbankapp.GlobalMoneyActivity"
+            android:label="@string/title_activity_global_money" >
         </activity>
     </application>
 

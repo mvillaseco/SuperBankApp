@@ -26,4 +26,11 @@ public class PrincipalActivity extends Activity {
 		
 		startActivity(intent);
 	}
+	
+	public void getGlobalMoney(View view)
+	{
+		Intent intent = new Intent(this, GlobalMoneyActivity.class);
+		
+		startActivity(intent);		
+	}
 }

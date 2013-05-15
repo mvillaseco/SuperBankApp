@@ -191,5 +191,31 @@ public class DDBB extends SQLiteOpenHelper {
 	//db.execSQL(sql2);
 	//db.execSQL(sql3);
     }
+    public int getMoneyByBankId(int bankId)
+    {
+    	 int valor = 0;
+	   	
+	   	 String sql = "SELECT valor from bank WHERE bank.banco = "+bankId+"";
+	
+	   	 Cursor c = this.getReadableDatabase().rawQuery(sql,null);	
+	   	 if( c != null ){
+	   			if( c.moveToFirst() ){
+	   	   	     c.moveToFirst();
+	   	    	 int iu;
+	   	    	 iu = c.getColumnIndex("valor");
+	   	    	
+	   	    	 
+	   	    	 c.moveToLast();
+	   	    	 valor = c.getInt(iu);
+	       	    	
+	   			}
+	   	 }
+	    	return valor;
+    }
+    public int getGlobalMoney()
+    {
+    	int valor = getMoneyByBankId(1) + getMoneyByBankId(2) + getMoneyByBankId(3);
+    	return valor;
+    }
     
 }

@@ -31,14 +31,12 @@
     <string name="Dolar">Precio Dolar</string>
     <string name="Titulo">Bienvenido</string>
     <string name="title_activity_bancos">BancosActivity</string>
-    
-    
-     <!-- BancosActivity -->
-     <string name="BBVA">BBVA</string>
+
+    <!-- BancosActivity -->
+    <string name="BBVA">BBVA</string>
     <string name="Santander">Santander Rio</string>
     <string name="Galicia">Galicia</string>
-     <string name="TituloBancos">Bancos:</string>
-     
-     
+    <string name="TituloBancos">Bancos:</string>
+    <string name="title_activity_global_money">GlobalMoneyActivity</string>
 
 </resources>
