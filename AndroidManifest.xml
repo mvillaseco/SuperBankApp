@@ -3,6 +3,9 @@
     package="com.example.superbankapp"
     android:versionCode="1"
     android:versionName="1.0" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" /> 
+    
 
     <uses-sdk
         android:minSdkVersion="5"
@@ -15,19 +18,17 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.superbankapp.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher" >
         </activity>
         <activity
-            android:name="com.example.superbankapp.Depositado"
-            android:label="@string/title_activity_depositado" >
+            android:name="com.example.superbankapp.Depositado" >
         </activity>
         <activity
-            android:name="com.example.superbankapp.HomeActivity"
-            android:label="@string/title_activity_home" >
+            android:name="com.example.superbankapp.HomeActivity">
         </activity>
         <activity
-            android:name="com.example.superbankapp.PrincipalActivity"
-            android:label="@string/title_activity_principal" >
+            android:name="com.example.superbankapp.PrincipalActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,12 +36,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.superbankapp.BancosActivity"
-            android:label="@string/title_activity_bancos" >
+            android:name="com.example.superbankapp.BancosActivity">
         </activity>
         <activity
-            android:name="com.example.superbankapp.GlobalMoneyActivity"
-            android:label="@string/title_activity_global_money" >
+            android:name="com.example.superbankapp.GlobalMoneyActivity" >
+        </activity>
+        <activity
+            android:name="com.example.superbankapp.DolarBlueActivity" >
+            
         </activity>
     </application>
 

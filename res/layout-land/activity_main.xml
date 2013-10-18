@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:layout_weight="1.0"
+    android:background="@color/negro"
+    tools:context=".MainActivity" >
+
+ <TextView
+        android:id="@+id/textView1"
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+    	android:layout_marginLeft="10dp"    
+        style="@style/ButtonText"
+        android:text="@string/preguntaDepositar" />
+   
+             <Button
+                 android:id="@+id/uno"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_below="@+id/textView1"
+                 android:layout_marginRight="@dimen/margenRight"
+    			 android:layout_marginLeft="5dp"
+                 android:layout_marginTop="@dimen/margenTop"    
+        		 style="@style/ButtonText"
+                 android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
+                 android:tag="@string/uno"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/uno" />
+
+             <Button
+                 android:id="@+id/dos"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_below="@+id/textView1"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_toRightOf="@+id/uno"
+                 android:onClick="OnClick"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:tag="@string/dos"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/dos" />
+             
+             <Button
+                 android:id="@+id/tres"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"                 
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_toRightOf="@+id/dos"
+                 android:layout_marginTop="@dimen/margenTop"                 
+                 android:layout_below="@+id/textView1"
+                 android:tag="@string/tres"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/tres" />
+
+
+
+              <Button
+                 android:id="@+id/cuatro"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"                 
+                 android:layout_toRightOf="@+id/tres"
+                 android:layout_alignBottom="@+id/tres"
+                 android:tag="@string/cuatro"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/cuatro" />
+              
+              <Button
+                 android:id="@+id/cinco"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_toRightOf="@+id/cuatro"                 
+                 android:layout_alignBottom="@+id/cuatro"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:tag="@string/cinco"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/cinco" />
+
+             <Button
+                 android:id="@+id/seis"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_toRightOf="@+id/cinco"                
+                 android:layout_alignBottom="@+id/cinco"
+                 android:tag="@string/seis"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/seis" />
+        
+             
+             <Button
+                 android:id="@+id/siete"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/cuatro"
+    			 android:layout_marginLeft="5dp"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:tag="@string/siete"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/siete" />
+
+			<Button
+                 android:id="@+id/ocho"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_below="@+id/cinco"
+                 android:layout_toRightOf="@+id/siete"
+                 android:tag="@string/ocho"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/ocho" />
+
+             
+             <Button
+                 android:id="@+id/nueve"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_below="@+id/seis"
+                 android:layout_toRightOf="@+id/ocho"
+                 android:tag="@string/nueve"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/nueve" />
+
+             <Button
+                 android:id="@+id/diez"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_toRightOf="@+id/nueve"
+                 android:layout_alignBottom="@+id/nueve"
+                 android:tag="1000"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/mil" />
+             
+             <Button
+                 android:id="@+id/quince"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginRight="@dimen/margenRight"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_toRightOf="@+id/diez"
+                 android:layout_alignBottom="@+id/diez"
+                 android:tag="3000"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/tresmil" />
+
+			<Button
+                 android:id="@+id/veinte"
+                 android:layout_width="@dimen/buttonWidthLandscape"
+                 android:layout_height="@dimen/buttonWidthLandscape"
+                 android:layout_marginTop="@dimen/margenTop"
+                 android:layout_toRightOf="@+id/quince"
+                 android:layout_alignBottom="@+id/quince"
+                 android:tag="5000"    
+        		 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
+                 android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:text="@string/cincomil" />
+
+			<ToggleButton
+			    android:id="@+id/toggleButton"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignRight="@+id/seis"
+			    android:layout_alignTop="@+id/textView1"    
+        		style="@style/ButtonText"
+			    android:textOff="@string/ToggleDescontar"
+			    android:textOn="@string/ToggleDepositar"	    
+			    android:onClick="ToggleChanged" />
+
+</RelativeLayout>

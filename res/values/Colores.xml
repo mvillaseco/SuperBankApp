@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="negro">#000000</color>
-    <color name="blanco">#0fa86f</color>
+    <color name="negroPressed">#737272</color>
+    <color name="negroPressedBorder">#9B9A9A</color>
+    <color name="verdeMaking">#0fa86f</color>
+    <color name="verdeMakingPressed">#11BC7D</color>
+    <color name="verdeMakingPressedBorder">#0ADA8E</color>
+    
+    <color name="azulMaking">#0F6ABF</color>    
+    <color name="azulMakingPressed">#1175D3</color>
+    <color name="azulMakingPressedBorder">#168FFF</color>
+    
+    <color name ="azulBBVA">#376FA6</color>
+    <color name="rojoSantander">#EE332A</color>
+    <color name="naranjaGalicia">#ff6600</color>
+    <color name="galiciaPressed">#ff751a</color>
+    
+    <color name="rojoMaking">#EF037F</color>  <!--   663399 -->
+    <color name="rojoMakingPressed">#D2155A</color>
+    <color name="rojoMakingPressedBorder">#FF196E</color> 
+         
     <color name="blancoReal">#FFFFFF</color>
     <color name="manteca">#F2E0BD</color>
+    <color name="icono">#33B6EA</color>
+    <color name="iconoGrad">#2b87ab</color>
+    <color name="botonesPressed">#5AC1E9</color>
+    <color name="botonesBorderPressed">#6BCEF5</color>
     <color name="grisOscuro">#403930</color>
     <color name="azul">#0072C6</color>
 </resources>

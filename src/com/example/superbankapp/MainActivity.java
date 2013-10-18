@@ -2,6 +2,7 @@ package com.example.superbankapp;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,9 @@ public class MainActivity extends Activity {
 		Bundle bundle = getIntent().getExtras();
 		int valorBanco = bundle.getInt("Banco");
 		
+		DDBB handler = new DDBB(this);
+		Object context = getSystemService(Context.VIBRATOR_SERVICE);
+		handler.vibrar(context);
 		
 		ToggleButton toggleButton = (ToggleButton) findViewById(R.id.toggleButton);		
 		boolean on = toggleButton.isChecked();
@@ -41,6 +45,10 @@ public class MainActivity extends Activity {
 	
 	public void ToggleChanged (View view)
 	{
+		DDBB handler = new DDBB(this);
+		Object context = getSystemService(Context.VIBRATOR_SERVICE);
+		handler.vibrar(context);
+		
 		ToggleButton toggleButton = (ToggleButton) findViewById(R.id.toggleButton);		
 		boolean on = toggleButton.isChecked();
 		TextView mainText = (TextView) findViewById(R.id.textView1);

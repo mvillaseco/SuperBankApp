@@ -1,7 +1,7 @@
 package com.example.superbankapp;
 
-import android.R.integer;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,8 +23,12 @@ public class BancosActivity extends Activity {
 	}
 	
 	public void seleccionBanco(View view)
-	{
+	{		
 		DDBB db = new DDBB(this);
+		
+		Object context = getSystemService(Context.VIBRATOR_SERVICE);
+		db.vibrar(context);
+		
 		db.grabarpordefecto();
 		Intent intent = new Intent(this, HomeActivity.class);
 		String bankparsed = (String) view.getTag();

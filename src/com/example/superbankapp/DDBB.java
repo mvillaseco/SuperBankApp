@@ -1,14 +1,30 @@
 package com.example.superbankapp;
 
 import static android.provider.BaseColumns._ID;
+
+import java.io.IOException;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Vibrator;
 
 public class DDBB extends SQLiteOpenHelper {
 
+	HttpClient client = new DefaultHttpClient();
+	final static String URL = "http://ws.geeklab.com.ar/dolar/get-dolar-json.php";
     public DDBB(Context ctx) {
         super(ctx, "BankDB",null ,10);
     }	
@@ -37,7 +53,6 @@ public class DDBB extends SQLiteOpenHelper {
     public void Actualizar(Integer valor, String datos, int banco){
     	ContentValues values = new ContentValues();
     	int resultado = 0;
-    	String columnas[] = {_ID,"valor","datos","banco"};
     	//Cursor c = this.getWritableDatabase().query("bank", columnas, null,null,null,null,null); 
     	String sql = "SELECT valor from bank WHERE bank.banco = "+banco+"";
 
@@ -71,7 +86,6 @@ public class DDBB extends SQLiteOpenHelper {
     public void ActualizarRetirar(Integer valor, String datos, int banco){
     	ContentValues values = new ContentValues();
     	int resultado = 0;
-    	String columnas[] = {"valor",_ID,"datos"};
     	//Cursor c = this.getWritableDatabase().query("bank", columnas, null,null,null,null,null); 	  	
     	String sql = "SELECT valor from bank WHERE bank.banco = "+banco+"";
 
@@ -103,7 +117,6 @@ public class DDBB extends SQLiteOpenHelper {
     
     public String leer(int bancoSelec){
     	 String result = "";
-    	 String columnas[]= {_ID,"valor","datos","banco"};
     	// Cursor c = this.getReadableDatabase().query("bank", columnas,null,null,null,null,null);
     	 String sql = "SELECT valor,banco from bank WHERE bank.banco = "+bancoSelec+"";
 
@@ -111,18 +124,15 @@ public class DDBB extends SQLiteOpenHelper {
     	 if( c != null ){
     			if( c.moveToFirst() ){
     	   	     c.moveToFirst();
-    	    	 int id,iu,ip,it;
-    	    	 id = c.getColumnIndex(_ID);
+    	    	 int iu;
     	    	 iu = c.getColumnIndex("valor");
-    	    	 ip = c.getColumnIndex("datos");
-    	    	 it = c.getColumnIndex("banco");
     	    	 
     	    	 c.moveToLast();
-    	    		 result = "Actualmente tienes $"+c.getInt(iu)+" en el banco: "+c.getString(it);//+"en el banco: "+c.getString(it);  
+    	    		 result = "Actualmente tienes $"+c.getInt(iu)+" en este Banco";  
         	    	 //+" Transacciòn Nùmero: "+c.getInt(id)
         	    	 return result; 	    	     	    	 
     		} else{
-    			result = "No tiene ningun deposito en este banco";
+    			result = "No tiene ningun deposito en este Banco";
     			
     		}  		
     		}
@@ -137,8 +147,7 @@ public class DDBB extends SQLiteOpenHelper {
     	 if( cur != null ){
  			if( cur.moveToFirst() ){
  	   	     cur.moveToFirst();
- 	    	 int id,iu;
- 	    	 id = cur.getColumnIndex(_ID);
+ 	    	 int iu;
  	    	 iu = cur.getColumnIndex("nombre");
  	    	 
  	    	 cur.moveToLast();
@@ -181,15 +190,6 @@ public class DDBB extends SQLiteOpenHelper {
 				this.getWritableDatabase().insert("createdbank", null, values2);
 			}
 			}
-	   
-		
-	
-	//String sql = "INSERT INTO createdbank (nombre) VALUES ('BBVA')";
-	//String sql2 = "INSERT INTO createdbank (nombre) VALUES ('Santander')";
-	//String sql3 = "INSERT INTO createdbank (nombre) VALUES ('Galicia')";
-	//db.execSQL(sql);
-	//db.execSQL(sql2);
-	//db.execSQL(sql3);
     }
     public int getMoneyByBankId(int bankId)
     {
@@ -217,5 +217,36 @@ public class DDBB extends SQLiteOpenHelper {
     	int valor = getMoneyByBankId(1) + getMoneyByBankId(2) + getMoneyByBankId(3);
     	return valor;
     }
-    
+    public void vibrar(Object context)
+    {    	
+    	Vibrator v = (Vibrator) context;
+    	v.vibrate(20);
+    }
+	public JSONObject dolarValue() throws ClientProtocolException, IOException, JSONException
+	{
+
+
+		
+		StringBuilder url = new StringBuilder(URL);
+		
+		HttpGet get = new HttpGet(url.toString());
+		HttpResponse resp = client.execute(get);
+		int status = resp.getStatusLine().getStatusCode();
+		if(status == 200){
+			HttpEntity e = resp.getEntity();
+			String data = EntityUtils.toString(e);
+			JSONObject timeline = new JSONObject(data);
+			
+			
+			
+			//JSONObject last = timeline.getJSONObject("rhs");
+
+			
+			return timeline;
+		}else{
+			
+			return null;
+		}
+	}
+	
 }

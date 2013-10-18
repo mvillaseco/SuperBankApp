@@ -1,8 +1,9 @@
 package com.example.superbankapp;
 
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -15,10 +16,11 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
+		
 		DDBB handler = new DDBB(this);
 		
+		
 		TextView monto = (TextView) findViewById(R.id.Monto);
-		TextView banco = (TextView) findViewById(R.id.BancoSeleccionado);
 		Bundle bundle = getIntent().getExtras();
 		int valorBanco = bundle.getInt("Boton");
 			handler.abrir();		
@@ -30,8 +32,13 @@ public class HomeActivity extends Activity {
 		
 		DDBB db = new DDBB(this);
 		db.abrir();
-		String mauro = db.getNombreBanco(valorBanco);
-		Banco.setText(db.getNombreBanco(valorBanco));
+		if(db.getNombreBanco(valorBanco).equals("Santander"))
+		{
+			Banco.setText("Santander Rio");
+		}else{
+			Banco.setText(db.getNombreBanco(valorBanco));	
+		}
+		
 		
 	}
 	
@@ -58,6 +65,10 @@ public class HomeActivity extends Activity {
 	
 	public void onClick(View view) 
 	{
+		DDBB handler = new DDBB(this);
+		Object context = getSystemService(Context.VIBRATOR_SERVICE);
+		handler.vibrar(context);
+		
 		Intent intent = new Intent(this, MainActivity.class);	
 		TextView banco = (TextView) findViewById(R.id.BancoSeleccionado);
 		String nombreBanco = (String) banco.getText();

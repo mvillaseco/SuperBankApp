@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/negro"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -9,9 +10,84 @@
     tools:context=".GlobalMoneyActivity" >
 
     <TextView
-        android:id="@+id/globalmoney"
+        android:id="@+id/textView1"
+        style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Dinero Global"
+        android:textColor="@color/blancoReal"
+        android:textSize="35sp" />
+
+
+   
+    <LinearLayout
+         android:id="@+id/gridLayout1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gridLayout2"        
+        android:layout_alignTop="@+id/textView1"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/gridstyle" >
+    
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="Cambiar a dolar blue"
+            android:textColor="@color/blancoReal" />
+
+        <ToggleButton
+            android:id="@+id/onOffBlue"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:onClick="onToggleChanged"
+            android:layout_gravity="right|center"
+            android:text="ToggleButton" />
+
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/gridLayout2"
+         android:layout_width="300dp"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         android:background="@drawable/gridstyle" >
+
+         <TextView
+             android:id="@+id/texto"
+             style="@style/ButtonText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Monto total:"
+             android:textColor="@color/blancoReal" />
+
+         <TextView
+             android:id="@+id/signoPesos"
+             style="@style/ButtonText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginLeft="20dp"
+             android:text="$ "
+             android:textColor="@color/blancoReal" />
+         <TextView
+             android:id="@+id/globalmoneytxt"
+             style="@style/ButtonText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="right|center_vertical"
+             android:text="@string/hello_world"
+             android:textColor="@color/blancoReal" />
+     </LinearLayout>
 
 </RelativeLayout>

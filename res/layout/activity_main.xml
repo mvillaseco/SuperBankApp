@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
+    android:layout_weight="1.0"
     android:background="@color/negro"
     android:gravity="center"
     tools:context=".MainActivity" >
@@ -13,18 +14,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:textColor="@color/azul"
+        android:textColor="@color/blancoReal"
+        style="@style/ButtonText"
         android:text="@string/preguntaDepositar" />
    
              <Button
-                 android:id="@+id/uno"
-                 style="@style/Botones"
+                 android:id="@+id/uno"                 
+        		 style="@style/ButtonText"
                  android:layout_width="@dimen/buttonWidth"
                  android:layout_height="@dimen/buttonHeight"
                  android:layout_below="@+id/textView1"
                  android:layout_marginRight="@dimen/margenRight"
                  android:layout_marginTop="@dimen/margenTop"
                  android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
+                 android:textColor="@color/blancoReal"
                  android:tag="@string/uno"
                  android:text="@string/uno" />
 
@@ -37,7 +41,10 @@
                  android:layout_marginTop="@dimen/margenTop"
                  android:layout_toRightOf="@+id/uno"
                  android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 android:background="@drawable/buttonsdrawable"
                  android:tag="@string/dos"
+                 style="@style/ButtonText"
                  android:text="@string/dos" />
              
              <Button
@@ -48,7 +55,10 @@
                  android:layout_marginTop="@dimen/margenTop"                 
                  android:layout_below="@+id/textView1"
                  android:tag="@string/tres"
+                 android:textColor="@color/blancoReal"
                  android:onClick="OnClick"
+                 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
                  android:text="@string/tres" />
 
 
@@ -62,6 +72,9 @@
                  android:layout_marginTop="@dimen/margenTop"
                  android:tag="@string/cuatro"
                  android:onClick="OnClick"
+                 android:textColor="@color/blancoReal"
+                 style="@style/ButtonText"
+                 android:background="@drawable/buttonsdrawable"
                  android:text="@string/cuatro" />
               
               <Button
@@ -71,9 +84,12 @@
                  android:layout_below="@+id/dos"
                  android:layout_toRightOf="@+id/cuatro"
                  android:layout_marginRight="@dimen/margenRight"
+                 style="@style/ButtonText"
                  android:layout_marginTop="@dimen/margenTop"
                  android:tag="@string/cinco"
+                 android:textColor="@color/blancoReal"
                  android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
                  android:text="@string/cinco" />
 
              <Button
@@ -83,7 +99,10 @@
                  android:layout_marginTop="@dimen/margenTop"
                  android:layout_below="@+id/tres"
                  android:layout_toRightOf="@+id/cinco"
+                 android:textColor="@color/blancoReal"
+                 style="@style/ButtonText"
                  android:tag="@string/seis"
+                 android:background="@drawable/buttonsdrawable"
                  android:onClick="OnClick"
                  android:text="@string/seis" />
         
@@ -96,7 +115,10 @@
                  android:layout_below="@+id/cuatro"
                   android:layout_marginRight="@dimen/margenRight"
                   android:tag="@string/siete"
+                  style="@style/ButtonText"
+                  android:textColor="@color/blancoReal"
                   android:onClick="OnClick"
+                  android:background="@drawable/buttonsdrawable"
                  android:text="@string/siete" />
 
 			<Button
@@ -104,11 +126,14 @@
                  android:layout_width="@dimen/buttonWidth"
                  android:layout_height="@dimen/buttonHeight"
                  android:layout_marginTop="@dimen/margenTop"
+                 android:textColor="@color/blancoReal"
                  android:layout_below="@+id/cinco"
+                 style="@style/ButtonText"
                  android:layout_toRightOf="@+id/siete"
                  android:tag="@string/ocho"
                  android:onClick="OnClick"
-                  android:layout_marginRight="@dimen/margenRight"
+                 android:background="@drawable/buttonsdrawable"
+                 android:layout_marginRight="@dimen/margenRight"
                  android:text="@string/ocho" />
 
              
@@ -117,10 +142,13 @@
                  android:layout_width="@dimen/buttonWidth"
                  android:layout_height="@dimen/buttonHeight"
                  android:layout_marginTop="@dimen/margenTop"
+                 android:textColor="@color/blancoReal"
                  android:layout_below="@+id/seis"
+                 style="@style/ButtonText"
                  android:layout_toRightOf="@+id/ocho"
                  android:tag="@string/nueve"
                  android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
                  android:text="@string/nueve" />
 
              <Button
@@ -130,7 +158,10 @@
                  android:layout_marginTop="@dimen/margenTop"
                  android:layout_below="@+id/siete"
                  android:tag="1000"
+                 android:textColor="@color/blancoReal"
+                 style="@style/ButtonText"
                  android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
                  android:layout_marginRight="@dimen/margenRight"
                  android:text="@string/mil" />
              
@@ -141,9 +172,12 @@
                  android:layout_marginRight="@dimen/margenRight"
                  android:layout_marginTop="@dimen/margenTop"
                  android:layout_below="@+id/ocho"
+                 android:textColor="@color/blancoReal"
                  android:layout_toRightOf="@+id/diez"
+                 style="@style/ButtonText"
                  android:tag="3000"
                  android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
                  android:text="@string/tresmil" />
 
 			<Button
@@ -151,9 +185,12 @@
                  android:layout_width="@dimen/buttonWidth"
                  android:layout_height="@dimen/buttonHeight"
                  android:layout_marginTop="@dimen/margenTop"
+                 android:textColor="@color/blancoReal"
                  android:layout_below="@+id/nueve"
+                 style="@style/ButtonText"
                  android:tag="5000"
                  android:onClick="OnClick"
+                 android:background="@drawable/buttonsdrawable"
                  android:layout_toRightOf="@+id/quince"
                  android:text="@string/cincomil" />
 
@@ -161,10 +198,12 @@
 			    android:id="@+id/toggleButton"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
+			    style="@style/ButtonText"
 			    android:layout_alignRight="@+id/tres"
 			    android:layout_alignTop="@+id/textView1"
 			    android:textOff="@string/ToggleDescontar"
 			    android:textOn="@string/ToggleDepositar"
+			    android:textColor="@color/blancoReal"
 			    android:onClick="ToggleChanged" />
 
 </RelativeLayout>

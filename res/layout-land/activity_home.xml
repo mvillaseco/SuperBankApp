@@ -14,35 +14,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="10dp"    
         style="@style/ButtonText"
-        android:textColor="@color/blancoReal"
+        android:minWidth="140dp"
+        android:textSize="24dp"
         android:text="@string/Titulo" />
 
     <TextView
         android:id="@+id/Monto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonTransacciones"
         android:layout_below="@+id/BancoSeleccionado"
-        android:textColor="@color/blancoReal"
+        android:layout_marginTop="25dp"    
         style="@style/ButtonText"
-        android:layout_marginTop="42dp"
         android:text="Actualmente tienes $0"
-        
+        android:layout_centerHorizontal="true"
         android:textIsSelectable="true" />
 
     <Button
         android:id="@+id/buttonTransacciones"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/buttonPrincipalHeight"
-        android:layout_below="@+id/Monto"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Monto"    
+        style="@style/ButtonText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="63dp"
-        android:onClick="onClick"
         android:textColor="@color/blancoReal"
-        android:background="@drawable/buttonsdrawable"        
-        style="@style/ButtonText"
+        android:onClick="onClick"
+        android:background="@drawable/buttonsdrawable"
         android:text="Transacciones" />
 
 </RelativeLayout>
